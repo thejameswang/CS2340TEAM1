@@ -1,3 +1,5 @@
+import Math.Random;
+
 package edu.gatech.oad.antlab.person;
 
 /**
@@ -10,6 +12,7 @@ package edu.gatech.oad.antlab.person;
  */
 public class Person2 {
     /** Holds the persons real name */
+    private Random rand;
     private String name;
 	 	/**
 	 * The constructor, takes in the persons
@@ -31,7 +34,16 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+		rand = new Random();
+		char a[] = input.toCharArray();
+		for (int i =0; i < a.length; i++) {
+			int j = rand.nextInt(a.length);
+			char temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+
+	   return new String(a);
 	}
 	/**
 	 * Return a string rep of this object
