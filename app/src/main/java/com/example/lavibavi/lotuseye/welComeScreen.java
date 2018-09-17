@@ -49,6 +49,7 @@ public class welComeScreen extends AppCompatActivity {
         });
     }
 
+    g
 
     private void validate(String userName, String passWord) {
         if (userName == "Admin" && passWord == "hk!08") {
